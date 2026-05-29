@@ -1,0 +1,258 @@
+{
+  "notes": {
+    "target": "One WLED eye made from two 32x8 panels chained as a 64x8 matrix, 512 LEDs total.",
+    "wled_setup": "Use RGB color order, one segment from 0 to 512, matrix 64x8.",
+    "how_to_use": "In WLED, create a preset, open API command/JSON field, paste one command object below, and save. If the eye shape looks scrambled, try the matching serpentine variant.",
+    "source": "WLED JSON API segment individual LED control using seg.i."
+  },
+  "commands": {
+    "amber_angry_eye_progressive": {
+      "on": true,
+      "bri": 96,
+      "transition": 4,
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "start": 0,
+          "stop": 512,
+          "on": true,
+          "fx": 0,
+          "frz": true,
+          "col": [
+            [
+              255,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "i": [
+            0,
+            512,
+            "000000",
+            77,
+            120,
+            "FF3000",
+            142,
+            182,
+            "FF5400",
+            207,
+            246,
+            "FF7800",
+            271,
+            310,
+            "FF7800",
+            336,
+            374,
+            "FF5400",
+            401,
+            437,
+            "FF3000",
+            154,
+            160,
+            "000000",
+            218,
+            225,
+            "000000"
+          ]
+        }
+      ]
+    },
+    "red_alert_eye_progressive": {
+      "on": true,
+      "bri": 128,
+      "transition": 4,
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "start": 0,
+          "stop": 512,
+          "on": true,
+          "fx": 0,
+          "frz": true,
+          "col": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "i": [
+            0,
+            512,
+            "000000",
+            77,
+            120,
+            "A00000",
+            142,
+            182,
+            "FF0000",
+            207,
+            246,
+            "FF2400",
+            271,
+            310,
+            "FF2400",
+            336,
+            374,
+            "FF0000",
+            401,
+            437,
+            "A00000",
+            154,
+            160,
+            "000000",
+            218,
+            225,
+            "000000"
+          ]
+        }
+      ]
+    },
+    "amber_angry_eye_serpentine": {
+      "on": true,
+      "bri": 96,
+      "transition": 4,
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "start": 0,
+          "stop": 512,
+          "on": true,
+          "fx": 0,
+          "frz": true,
+          "col": [
+            [
+              255,
+              72,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "i": [
+            0,
+            512,
+            "000000",
+            71,
+            114,
+            "FF3000",
+            142,
+            182,
+            "FF5400",
+            207,
+            246,
+            "FF7800",
+            265,
+            304,
+            "FF7800",
+            336,
+            374,
+            "FF5400",
+            401,
+            437,
+            "FF3000",
+            160,
+            166,
+            "000000",
+            218,
+            225,
+            "000000"
+          ]
+        }
+      ]
+    },
+    "red_alert_eye_serpentine": {
+      "on": true,
+      "bri": 128,
+      "transition": 4,
+      "mainseg": 0,
+      "seg": [
+        {
+          "id": 0,
+          "start": 0,
+          "stop": 512,
+          "on": true,
+          "fx": 0,
+          "frz": true,
+          "col": [
+            [
+              255,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "i": [
+            0,
+            512,
+            "000000",
+            71,
+            114,
+            "A00000",
+            142,
+            182,
+            "FF0000",
+            207,
+            246,
+            "FF2400",
+            265,
+            304,
+            "FF2400",
+            336,
+            374,
+            "FF0000",
+            401,
+            437,
+            "A00000",
+            160,
+            166,
+            "000000",
+            218,
+            225,
+            "000000"
+          ]
+        }
+      ]
+    }
+  }
+}
